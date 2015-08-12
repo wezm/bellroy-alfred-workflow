@@ -9,7 +9,7 @@ Install
 -------
 
 1. [Download the workflow](https://github.com/wezm/bellroy-alfred-workflow/releases/latest)
-2. Double click on the download file to add it to Alfred
+2. Double click on the downloaded workflow to add it to Alfred
 
 Usage
 -----
