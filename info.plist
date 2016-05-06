@@ -50,12 +50,8 @@
 				<key>runningsubtext</key>
 				<string>Loading...</string>
 				<key>script</key>
-				<string># set modified time of reference file to ~100 hours ago, which is the
-# max allowed by touch
-touch -A -995959 ref.txt
-
-# Fetch sitemap if cached file is older than ref file
-if [ ! -e sitemap.xml ] || [ sitemap.xml -ot ref.txt ]; then
+				<string># Fetch sitemap if cached file is older than 5 days
+if [ ! -e sitemap.xml ] || [[ $(stat -f "%m" sitemap.xml) -lt $(date -j -v-5d +%s) ]]; then
 	curl -sO http://bellroy.com/sitemap.xml
 fi
 
