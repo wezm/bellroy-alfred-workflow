@@ -1,9 +1,9 @@
 Bellroy Alfred Workflow
 =======================
 
-Use the Bellroy XML sitemap to autocomplete URLs on the Bellroy website.
+Use the Bellroy XML sitemap to autocomplete URLs on the Bellroy website.
 
-![Screenshot](http://d.pr/i/dfv3+)
+![Screenshot](https://camo.githubusercontent.com/a7f291c15df505e1f042ae7cc303ce9b2b6f824f/687474703a2f2f642e70722f692f646676332b)
 
 Install
 -------
