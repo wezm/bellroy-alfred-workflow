@@ -17,6 +17,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 	</dict>
@@ -33,6 +35,8 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>escaping</key>
@@ -52,11 +56,17 @@
 				<key>script</key>
 				<string># Fetch sitemap if cached file is older than 5 days
 if [ ! -e sitemap.xml ] || [[ $(stat -f "%m" sitemap.xml) -lt $(date -j -v-5d +%s) ]]; then
-	curl -sO http://bellroy.com/sitemap.xml
+	curl -sLO https://bellroy.com/sitemap.xml
 fi
 
 # Search for a match
 xsltproc --stringparam query "{query}" filter.xslt sitemap.xml</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
 				<key>title</key>
 				<string>Bellroy</string>
 				<key>type</key>
@@ -69,13 +79,15 @@ xsltproc --stringparam query "{query}" filter.xslt sitemap.xml</string>
 			<key>uid</key>
 			<string>7DD3BDE5-A157-42E5-9376-F681FB50A4EE</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>plusspaces</key>
-				<false/>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
 				<key>url</key>
 				<string>{query}</string>
 				<key>utf8</key>
@@ -86,7 +98,7 @@ xsltproc --stringparam query "{query}" filter.xslt sitemap.xml</string>
 			<key>uid</key>
 			<string>FB5595FC-BE3F-46F6-9113-A14D25861B01</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -95,11 +107,15 @@ xsltproc --stringparam query "{query}" filter.xslt sitemap.xml</string>
 	<dict>
 		<key>7DD3BDE5-A157-42E5-9376-F681FB50A4EE</key>
 		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
 			<key>ypos</key>
 			<real>10</real>
 		</dict>
 		<key>FB5595FC-BE3F-46F6-9113-A14D25861B01</key>
 		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
 			<key>ypos</key>
 			<real>10</real>
 		</dict>
